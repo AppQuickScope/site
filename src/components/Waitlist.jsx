@@ -78,11 +78,10 @@ export default function Waitlist() {
           }`}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Be the first to experience QuickScope
+            Time to level up your news game 🚀
           </h2>
           <p className="text-xl opacity-90 mb-10">
-            Join the waitlist and get early access when we launch. We're building 
-            the future of news consumption.
+            No cap - we're changing the news game forever. Grab your spot before the waitlist fills up (fr fr).
           </p>
           
           <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
@@ -91,7 +90,7 @@ export default function Waitlist() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="Drop your email here"
                 className="flex-grow px-4 py-3 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                 required
                 disabled={isLoading}
@@ -103,13 +102,13 @@ export default function Waitlist() {
                 }`}
                 disabled={isLoading}
               >
-                {isLoading ? 'Submitting...' : 'Join Waitlist'}
+                {isLoading ? 'Loading...' : 'Get Early Access'}
               </button>
             </div>
             
             {isSubmitted && (
               <div className="mt-4 p-3 bg-green-500 bg-opacity-20 rounded-lg text-white">
-                Thanks for joining! We'll keep you updated.
+                Let's gooo! 🔥 You're officially in the squad. We'll slide into your inbox with the VIP access soon!
               </div>
             )}
             
@@ -120,7 +119,7 @@ export default function Waitlist() {
             )}
             
             <p className="mt-4 text-sm opacity-70">
-              We respect your privacy and will never share your email.
+              Dw, we keep it 💯 - your email stays private and safe with us.
             </p>
           </form>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,9 +8,9 @@ export default function Header() {
     <header className="bg-white py-4 shadow-sm fixed w-full top-0 z-50">
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold text-primary">
+          <Link to="/" className="text-2xl font-bold text-primary">
             QuickScope
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -20,6 +21,9 @@ export default function Header() {
           <a href="#mission" className="text-gray-600 hover:text-primary transition-colors">
             Mission
           </a>
+          <Link to="/pitch" className="text-gray-600 hover:text-primary transition-colors">
+            Pitch Deck
+          </Link>
           <a href="#waitlist" className="btn btn-primary">
             Get Early Access
           </a>
@@ -59,6 +63,13 @@ export default function Header() {
           >
             Mission
           </a>
+          <Link 
+            to="/pitch" 
+            className="block text-gray-600 hover:text-primary" 
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Pitch Deck
+          </Link>
           <a 
             href="#waitlist" 
             className="block btn btn-primary text-center" 

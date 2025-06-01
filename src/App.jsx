@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AppMockup from './components/AppMockup';
@@ -5,11 +6,11 @@ import Features from './components/Features';
 import Mission from './components/Mission';
 import Waitlist from './components/Waitlist';
 import Footer from './components/Footer';
+import Pitch from './components/Pitch';
 
-function App() {
+function HomePage() {
   return (
-    <div className="w-full">
-      <Header />
+    <>
       <main className="w-full">
         <Hero />
         <AppMockup />
@@ -18,7 +19,21 @@ function App() {
         <Waitlist />
       </main>
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="w-full">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pitch" element={<Pitch />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
