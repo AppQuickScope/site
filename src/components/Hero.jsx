@@ -7,6 +7,14 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const waitlistSection = document.getElementById('waitlist');
+    if (waitlistSection) {
+      waitlistSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-white via-indigo-50 to-white relative overflow-hidden">
       {/* Background Elements */}
@@ -46,15 +54,15 @@ export default function Hero() {
               isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
             }`}
           >
-            <a 
-              href="#waitlist" 
+            <button 
+              onClick={handleScroll}
               className="group inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Get Early Access
               <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>
