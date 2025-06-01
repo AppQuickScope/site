@@ -18,7 +18,10 @@ export default function Pitch() {
           }
         });
       },
-      { threshold: 0.5 }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px 0px'  // Preload content before it comes into view
+      }
     );
 
     sectionRefs.current.forEach(ref => {
@@ -247,7 +250,7 @@ export default function Pitch() {
             <div className="relative mb-24">
               {/* Desktop Mockup - Hidden on mobile */}
               <div className="relative hidden md:block">
-                <div className="relative w-full max-w-5xl mx-auto">
+                <div className="relative w-full max-w-5xl mx-auto transform scale-[0.85] origin-top">
                   <div className="bg-gray-800 rounded-2xl shadow-2xl p-4 overflow-hidden">
                     {/* Browser Top Bar */}
                     <div className="bg-gray-700 rounded-t-lg p-2 flex items-center space-x-2 mb-2">
@@ -732,7 +735,7 @@ export default function Pitch() {
         <div
           key={section.id}
           ref={el => sectionRefs.current[index] = el}
-          className={`transition-opacity duration-1000 ${
+          className={`transition-opacity duration-300 ${
             Math.abs(activeSection - index) <= 1 ? 'opacity-100' : 'opacity-0'
           }`}
         >
