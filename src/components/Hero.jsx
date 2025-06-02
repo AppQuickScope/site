@@ -31,11 +31,11 @@ export default function Hero() {
               isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
             }`}
           >
-            <div className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-600 inline whitespace-nowrap">
+            <div className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-600 inline md:whitespace-nowrap">
               Quick, personalized news
             </div>
             {' '}
-            <div className="inline whitespace-nowrap">
+            <div className="inline md:whitespace-nowrap">
               that actually makes sense
             </div>
           </h1>
