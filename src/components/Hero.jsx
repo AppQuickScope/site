@@ -27,15 +27,15 @@ export default function Hero() {
         <div className="text-center max-w-[1200px] mx-auto px-4">
           {/* Main Heading */}
           <h1 
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 transition-all duration-700 max-w-[900px] mx-auto ${
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 transition-all duration-700 max-w-[1000px] mx-auto ${
               isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
             }`}
           >
-            <div className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-600 inline">
+            <div className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-600 inline whitespace-nowrap">
               Quick, personalized news
             </div>
             {' '}
-            <div className="inline">
+            <div className="inline whitespace-nowrap">
               that actually makes sense
             </div>
           </h1>
