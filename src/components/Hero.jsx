@@ -27,16 +27,17 @@ export default function Hero() {
         <div className="text-center max-w-[1200px] mx-auto px-4">
           {/* Main Heading */}
           <h1 
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 transition-all duration-700 max-w-[900px] mx-auto flex flex-col ${
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 transition-all duration-700 max-w-[900px] mx-auto ${
               isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
             }`}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-600 mb-1 md:mb-2">
+            <div className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-600 inline">
               Quick, personalized news
-            </span>
-            <span>
+            </div>
+            {' '}
+            <div className="inline">
               that actually makes sense
-            </span>
+            </div>
           </h1>
 
           {/* Subheading */}
